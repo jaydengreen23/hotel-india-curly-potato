@@ -1,8 +1,10 @@
-// $(document).ready(function(){
-    // Gets the restraunts for the city
+
+   //Stores checkbox values
     var checkedCheckboxes = [];
     var sportsBoxes = [];
     var attractionBoxes = [];
+
+     // Gets the restraunts for the city
       function updateCheckboxes() {
       var selection = document.getElementById("city").value;
       var checkboxContainer = document.getElementById("checkboxContainer");
@@ -147,5 +149,36 @@
     function displayCheckedCheckboxes() {
       var output = document.getElementById("output");
       var selection = document.getElementById("city").value;
-      output.innerHTML = "You are going to: " + selection +"! <br>You will be eating at: "+ checkedCheckboxes.join(", ") + "<br>You will be enjoying these popular attrations: " + attractionBoxes.join(", ") +"<br>You will be enjoying watching these sports: "+sportsBoxes.join(", ");
+      var fname = document.getElementById("fname").value;
+      var phone = document.getElementById("phone").value;
+      var email = document.getElementById("email").value;
+
+      output.innerHTML = fname +", you are going to: " + selection 
+      +"! <br>You will be eating at: "+ checkedCheckboxes.join(", ") 
+      + "<br>You will be enjoying these popular attrations: " 
+      + attractionBoxes.join(", ") +"<br>You will be enjoying watching these sports: "
+      +sportsBoxes.join(", ") + "<br> Your phone number is: "+ phone
+      +". <br>Your email is: " + email + ".";
     }
+    document.getElementById('fname').addEventListener('input', function() {
+      var inputField = this;
+      var errorMessage = document.getElementById('errorMessage');
+      var inputValue = inputField.value;
+      if (/[^a-zA-Z]/.test(inputValue)) {
+          errorMessage.textContent = 'Only letters are allowed.';
+          inputField.value = inputValue.replace(/[^a-zA-Z]/g, '');
+      } else {
+          errorMessage.textContent = '';
+      }
+  });
+  document.getElementById('phone').addEventListener('input', function() {
+    var inputField = this;
+    var errorMessage = document.getElementById('errorMessageNum');
+    var inputValue = phone.value;
+    if (/[^0-9]/.test(inputValue)) {
+      errorMessage.textContent = 'Only numbers are allowed.';
+      inputField.value = inputValue.replace(/[^0-9]/g, '');
+  } else {
+      errorMessage.textContent = '';
+  }
+});
