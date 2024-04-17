@@ -1,0 +1,24 @@
+
+body{
+    background-image: url('https://static.vecteezy.com/system/resources/previews/006/876/037/non_2x/people-from-all-over-the-world-remote-job-or-distance-work-concept-businessman-working-remotely-with-computer-laptop-on-location-map-pin-vector.jpg');
+      
+     text-shadow: 5px 2px 10px black;
+     color: white;
+     text-align: center;
+  }  
+  h1{
+    font-size: 100px;
+  }
+  
+  #hidden{
+    display: none;
+  }
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+  }

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- doctype declaration: we are using HTML5 -->
+
+<html lang="en">
+
+<!-- header is "invisible" info about the page -->
+
+<head>
+    <meta charset="UTF-8">
+    <title>hotel-india-curly-potato</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link href="styles/style.css" rel="stylesheet"> 
+</head>
+
+
+<h1>TravTrax</h1>
+
+<h4>For all of your vacation needs in one place!</h4>
+
+<h4>Where would you like to go?</h4>
+
+<label for="city">Choose a city:</label>
+
+<select name="city" id="city"  onchange="updateCheckboxes(); updateAttractions(); updateSports();">
+  <option value="">Options</option>
+  <option value="NYC">New York City</option>
+  <option value="Atlanta">Atlana</option>
+  <option value="LA">Los Angles</option>
+  <option value="Miami">Miami</option>
+</select>
+<!-- <button id="ChoosePlace">Next</button> -->
+<br><br><br>
+<!-- <div id="hiddenText1"> -->
+<h4>Here is a list of some of the best restaurants ranked</h4>
+<h4>by local experts (lists are sorted by most least expensive to most):</h4>
+<div id="checkboxContainer"></div>
+<br><br>
+
+<h4>Popular Attractions:</h4>
+<div id="attractionContainer"></div>
+<br><br>
+
+<h4>Sporting Events:</h4>
+<div id="sportsContainer"></div>
+<br><br>
+
+<button type="button" class="btn btn-danger" onclick="unhide(); displayCheckedCheckboxes();">Click To Get Your Plan</button>
+<br><br>
+
+<div id="hidden">
+<h2>Here is Your Vacation Plan:</h2>
+  <div id="output"></div>
+<br>
+
+
+  <h2>Have fun on your vacation</h2> 
+  <h2>and we hope you choose us again for your next adventure!</h2>
+</div>
+<div class="footer">
+  <p>References: GreeksForGeeks, C++.com, Zybooks, W3Schools</p>
+</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+<script src="scripts/script.js"></script>
+
+
+
+</html>
